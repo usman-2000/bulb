@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On and Off bulb</title>
+    <style>
+        *{
+            background-color: black;
+            text-align: center;
+        }
+        .btn{
+            color: white;
+            border: 2px solid white;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .images{
+            width: 250px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/on.jpg" alt="on bulb" class="images" id="on_image" onclick="offBulb()"><br> <br>
+    <button class="btn" id="off" onclick="offBulb()">Off</button>
+    <button class="btn" id="on" onclick="onBulb()">On</button>
+
+</body>
+
+    <script>
+        function offBulb(){
+            var off = document.getElementById('off');
+            var on_image = document.getElementById('on_image');
+
+            // off.innerHTML = 'On';
+            on_image.src = '/off.jpg';
+        }
+
+        function onBulb(){
+            var on = document.getElementById('on');
+            var on_image = document.getElementById('on_image');
+
+            // off.innerHTML = 'Off';
+            on_image.src = '/on.jpg';
+        }
+    </script>
+</html>
